@@ -25,5 +25,10 @@ jobs:
 
     - name: Run tests
       run: |
-        cd src
-        python -m pytest addition.py
+          if [ -d "src" ]; then
+            cd src
+            python -m pytest addition.py
+          else
+            echo "Error: src directory not found."
+            exit 1
+          fi
