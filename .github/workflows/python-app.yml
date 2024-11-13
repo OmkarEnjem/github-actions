@@ -1,17 +1,17 @@
 name: Python package
 on: [push]
 
-jobs:
-  my-job:
-    runs-on: ubuntu-latest
 # jobs:
-#   build:
+#   my-job:
+#     runs-on: ubuntu-latest
+jobs:
+  build:
 
 
-#     runs-on: self-hosted
-#     strategy:
-#       matrix:
-#         python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+    runs-on: self-hosted
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10", "3.13"]
 
     steps:
       - uses: actions/checkout@v4
